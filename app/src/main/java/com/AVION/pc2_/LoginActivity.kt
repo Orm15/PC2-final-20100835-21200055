@@ -1,5 +1,6 @@
 package com.AVION.pc2_
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -7,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.AVION.pc2_.ui.RegistroMonto
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 
@@ -40,7 +42,7 @@ class LoginActivity : AppCompatActivity() {
                             .make(findViewById(android.R.id.content),
                                 "Inicio de sesión exitoso",
                                 Snackbar.LENGTH_SHORT).show()
-                        //startActivity(Intent(this, ::class.java))
+                        startActivity(Intent(this, RegistroMonto::class.java))
                     }else{
                         //Error en el inicio de sesión
                         Snackbar
